@@ -1,0 +1,423 @@
+body{
+    background-color:#fff;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    max-width: 100%;
+  } 
+/*create a fixed navbar*/
+nav{
+    height: 50px;
+    margin: 0;
+    padding: 20px;
+    background-color: #000;
+    min-width: 100vw;
+    display: flex;
+    flex-wrap: nowrap;
+    position: fixed;
+    top: 0; /* display above all pages*/
+    justify-content: space-between; 
+}
+
+#brand{
+  font-size: 3rem;
+  color: rgb(255, 208, 0);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+header{
+  margin-right: 5rem;
+}
+
+/* style main elements with flexbox*/ 
+main {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway', 'sans-serif';
+    justify-content: center;
+    text-align: center;
+    margin: 50px;
+}
+/* control image size*/   
+img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+/* style text */
+.about-paragraph {
+   font-weight: normal;
+   font-size: 1rem;
+}
+
+.about-title {
+   font-weight: bold;
+   font-size: 3rem;
+}
+
+/* Styling the dropdown menu (max width 768px)*/
+.othernav {
+    display: none;
+  }
+    .topnav {
+      position: relative;
+      margin: 0;
+      z-index: 9999999;
+    }
+    .dropdown {
+      position: absolute;
+      right: 0;
+      top: 10px
+    }
+  /*Hamburger menu Container settings*/
+  .dropdown{
+    position: fixed;
+    left: 80%;
+    top: 5%;
+    z-index: 999;
+  }
+  
+  /*change the opacity of the checkbox to zero*/
+  #toggle {
+    opacity:0;
+  }
+  
+  /*Add "About" after the checkbox is checked*/
+  #toggle:checked ~ .addtext1::after{
+    content: "About";
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: #000;
+    font-family: inherit;
+    margin: 0;
+    position: relative;
+  }
+  
+  /*Add "Tickets" after the checkbox is checked*/
+  #toggle:checked ~ .addtext2::after{
+    content: "Tickets";
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: #000;
+    font-family: inherit;
+    margin: 0;
+    position: relative;
+  }
+  
+  /*Add "Info" after the checkbox is checked*/
+  #toggle:checked ~ .addtext3::after{
+    content: "Info";
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: #000;
+    font-family: inherit;
+    margin: 0;
+    position: relative;
+  }
+  
+  /*Column display of the menu*/
+  .dropdown a{
+  display: flex;
+  flex-direction: column;
+  }
+  
+  .dropdown a:hover{
+    color: #777;
+  }
+  
+  /*Change hamburger menu color*/
+  .fa-bars {
+    color: white;
+  }
+
+/*appereance of main changes over 768px*/
+@media (min-width: 768px) {
+    .dropdown {
+        display: none;
+    }
+
+    .othernav {
+        display:flex; 
+        z-index: 9999999;
+        align-items: center;
+      }
+
+    nav a:not(#brand){
+        line-height: 80px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.25rem;
+        font-weight: 200;
+        padding: 1.5rem;
+    }
+
+    main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr;
+    font-family: 'Raleway', 'sans-serif';
+    min-height: 100vh;
+    grid-gap: 50px;
+    justify-content: space-around;
+    grid-template-areas: 
+    "history team";
+    text-align: center;
+    margin: 5vw;
+}
+
+/*assigning grid areas*/
+.history {
+    grid-area: history; 
+    margin: 50px; 
+}
+
+.team {
+    grid-area: team;
+    margin:  50px;
+}
+
+/* navigation links appear on big screen*/
+nav a:not(#brand){
+    line-height: 80px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 200;
+    padding: 1.5rem;
+    margin-right: 20px;
+}
+}
+
+/*appereance of main changes over 768px with max width 980px*/
+@media (min-width: 768px) and (max-width: 980px) {
+main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr;
+    font-family: 'Raleway', 'sans-serif';
+    min-height: 100vh;
+    grid-gap: 50px;
+    justify-content: space-around;
+    grid-template-areas: 
+    "history team";
+    text-align: center;
+    margin: 5vw;
+}
+/*assigning grid areas*/
+.history {
+    grid-area: history; 
+    margin: 50px; 
+}
+
+.team {
+    grid-area: team;
+    margin:  50px;
+}
+
+/*styling text*/
+.about-paragraph {
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.about-title {
+    font-weight: bold;
+    font-size: 3rem;
+}
+}
+    
+
+/*appereance of main changes over 980px*/
+@media (min-width: 980px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        font-family: 'Raleway', 'sans-serif';
+        height: 100vh;
+        grid-gap: 50px;
+        justify-content: space-around;
+        grid-template-areas: 
+        "history team";
+        text-align: center;
+        margin: 5vw;
+    }
+    /*assigning grid areas*/
+    .history {
+        grid-area: history; 
+        margin: 50px; 
+    }
+    
+    .team {
+        grid-area: team;
+        margin:  50px;
+    }
+        
+     /*change layout on pictures*/
+    #about-pictures {
+        display: flex;
+    }
+
+    .picture-content {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        margin: 10px;
+    }
+    
+    /*styling text*/
+    .about-paragraph {
+    font-weight: normal;
+    }
+
+    .about-title {
+    font-weight: bold;
+    font-size: 3rem;
+    }    
+}
+
+/* create sticky footer*/
+.sticky-footer {
+    display: flex;
+    flex: 1;  
+    margin: 0;
+    padding: 0; 
+}
+/* Style footer with flexbox*/
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: rgb(255, 208, 0);
+    color: rgb(0, 0, 0);
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+/* Style footer main item*/
+.ft-main-item {
+    line-height: 1.5rem;
+}
+
+/* Style footer useful links*/
+.ft-useful-links {
+    line-height: 1.5rem;
+}
+
+/* Style footer contact*/
+.ft-contact {
+    line-height: 1.5rem;
+}
+/* Style text in footer*/
+.ft-paragraph {
+    font-family: 'Raleway', 'sans-serif';
+    font-weight: normal;
+}
+ /* Style H2 Titles*/
+.ft-title {
+    color: #000;
+    font-family: 'Raleway', 'sans-serif';
+    font-size: 3rem;
+    font-weight: 900;
+}
+/* Style H3 titles*/
+.ft-title-2 {
+    color: #000;
+    font-family: 'Raleway', 'sans-serif';
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+/* Style Social Footer*/
+.ft-social {
+    padding: 0 1.8rem 1.2rem;
+}
+.ft-social-list {
+    display: flex;
+    justify-content: center;
+    border-top: 1px #000 solid; 
+    padding-top: 1.25rem;
+}
+.ft-social-list li {
+    margin: 0.5rem;
+    font-size: 1.25rem;
+} 
+
+/* Style all lists*/
+ul {
+    font-family: 'Raleway', 'sans-serif';
+    font-weight: normal;
+    list-style: none;
+    padding-left: 0;
+}
+
+/* unvisited link */
+a:link {
+    color:#000;
+    text-decoration: none;
+}
+    
+/* visited link */
+a:visited {
+    color:rgb(0, 0, 0);
+}
+
+/* mouse over link */
+a:hover {
+    color:#777;
+}
+  
+/* selected link */
+a:active {
+    color:#a16900;
+}
+
+
+@media (min-width: 980px) {
+    footer {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        max-height: 100vh;
+        grid-template-areas: 
+        "ft-main-item ft-useful-links ft-contact"
+        "ft-social ft-social ft-social";
+    }
+
+    /*assigning grid areas*/
+    .ft-main-item {
+        grid-area: ft-main-item;
+    }
+
+    .ft-useful-links {
+        grid-area: ft-useful-links; 
+    }
+
+    .ft-contact {
+        grid-area: ft-contact;
+    }
+
+    .ft-social {
+        grid-area: ft-social;
+    }
+
+    /*create responsive title*/
+    .ft-title {
+        color: #000;
+        font-family: 'Raleway', 'sans-serif';
+        font-size: 5vw;
+        font-weight: 900;
+    }
+
+     
+}

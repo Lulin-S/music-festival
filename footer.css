@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+}
+
+/* create sticky footer*/
+.sticky-footer {
+    display: flex;
+    flex: 1;  
+    min-height: 75vh;
+    margin: 0;
+    padding: 0; 
+}
+/* Style footer with flexbox*/
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: rgb(255, 208, 0);
+    color: rgb(0, 0, 0);
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+.ft-paragraph {
+    font-family: 'Raleway', 'sans-serif';
+    font-weight: normal;
+}
+  /* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Style all lists*/
+ul {
+    font-family: 'Raleway', 'sans-serif';
+    font-weight: normal;
+    list-style: none;
+    padding-left: 0;
+}
+
+/* unvisited link */
+a:link {
+    color:#000;
+    text-decoration: none;
+}
+    
+/* visited link */
+a:visited {
+    color:rgb(0, 0, 0);
+}
+
+/* mouse over link */
+a:hover {
+    color:#777;
+}
+  
+/* selected link */
+a:active {
+    color:#a16900;
+}
+
+/* Style footer main item*/
+.ft-main-item {
+    line-height: 1.5rem;
+}
+
+/* Style footer main item*/
+.ft-useful-links {
+    line-height: 1.5rem;
+}
+
+/* Style footer main item*/
+.ft-contact {
+    line-height: 1.5rem;
+}
+
+/* Style H2 Titles*/
+.ft-title {
+    color: #000;
+    font-family: 'Raleway', 'sans-serif';
+    font-size: 3rem;
+    font-weight: 900;
+}
+/* Style H3 titles*/
+.ft-title-2 {
+    color: #000;
+    font-family: 'Raleway', 'sans-serif';
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+/* Style Social Footer*/
+.ft-social {
+    padding: 0 1.8rem 1.2rem;
+}
+.ft-social-list {
+    display: flex;
+    justify-content: center;
+    border-top: 1px #000 solid; 
+    padding-top: 1.25rem;
+}
+.ft-social-list li {
+    margin: 0.5rem;
+    font-size: 1.25rem;
+}
+
+/*ändrar utseende på footer på över 768px*/
+@media (min-width: 768px) {
+    footer {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "ft-main-item ft-useful-links ft-contact"
+        "ft-social ft-social ft-social";
+       
+    }
+    .ft-main-item {
+        grid-area: ft-main-item;
+    }
+    .ft-useful-links {
+        grid-area: ft-useful-links; 
+    }
+
+    .ft-contact {
+        grid-area: ft-contact;
+    }
+
+    .ft-social {
+        grid-area: ft-social;
+    }
+
+    .ft-title {
+        color: #000;
+        font-family: 'Raleway', 'sans-serif';
+        font-size: 5vw;
+        font-weight: 900;
+    }
+    }
+
+
