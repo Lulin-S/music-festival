@@ -157,6 +157,10 @@ img{
     order:5;
   }
 
+  .box-7{
+    margin-right: 0;
+  }
+
 /* Styling the dropdown menu (max width 768px)*/
 .othernav {
   display: none;
