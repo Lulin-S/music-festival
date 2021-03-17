@@ -3,42 +3,42 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Rock Music Festival">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="info.css">
     <!-- Add fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;900&display=swap" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    <title>Info</title>
+    <title>Info and Contact - Music Fest</title>
 
 </head>
 
 <body>
-    <div>
-        <header class="topnav">
-            <nav>
-                <a id="brand" href="index.html">Music Fest</a>
-                <div class="othernav">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="tickets.html">Tickets</a>
-                    <a href="info.html">Info</a>
-                </div>
-            </nav>
-            <div class="dropdown">
-                <input type="checkbox" id="toggle">
-                <label for="toggle"><i class="fas fa-bars"></i></label>
-                <a class="addtext1" href="about.html"></a>
-                <a class="addtext2" href="tickets.html"></a>
-                <a class="addtext3" href="info.html"></a>
+    <header class="topnav">
+        <nav>
+            <a id="brand" href="index.html">Music Fest</a>
+            <div class="othernav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="tickets.html">Tickets</a>
+                <a href="info.html">Info</a>
             </div>
-        </header>
-    </div>
+        </nav>
+        <div class="dropdown">
+            <input type="checkbox" id="toggle">
+            <label for="toggle"><i class="fas fa-bars"></i></label>
+            <a class="addtext1" href="about.html"></a>
+            <a class="addtext2" href="tickets.html"></a>
+            <a class="addtext3" href="info.html"></a>
+        </div>
+    </header>
 
     <div class="container">
         <div class="questions">
+            <h2>FAQ</h2>
             <div>
                 <input type="checkbox" id="faq-1">
-                <h2><label for="faq-1">How can I get the tickets</label></h2>
+                <h3 class="faq"><label for="faq-1">How can I get the tickets</label></h3>
                 <p class="q-paragraph">You can buy it from <a href="https://www.ticketmaster.com/">Ticketsmaster</a>, or
                     you
                     can
@@ -47,13 +47,15 @@
 
             <div>
                 <input type="checkbox" id="faq-2">
-                <h2><label for="faq-2">What does it cost?</label></h2>
-                <p class="q-paragraph">There are three different ticket types, ranging from 500kr, 1000kr and 1500kr.
+                <h3 class="faq"><label for="faq-2">What does it cost?</label></h3>
+                <p class="q-paragraph">There are three different ticket types, ranging from 500kr, 1500kr and 3000kr.
+                    Read more <a href="tickets.html">here!</a>
                 </p>
             </div>
         </div>
 
         <div class="form">
+            <h2>Contact</h2>
             <form>
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="firstname" placeholder="Your name..">
@@ -100,9 +102,9 @@
         <!-- Add font awesome icons -->
         <div class="ft-social">
             <ul class="ft-social-list">
-                <li><a href="facebook.com" class="fa fa-facebook"></a></li>
-                <li><a href="twitter.com" class="fa fa-twitter"></a></li>
-                <li><a href="instagram.com" class="fa fa-instagram"></a></li>
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
             </ul>
         </div>
     </footer>

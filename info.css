@@ -19,6 +19,8 @@ nav{
   position: fixed;
   top: 0; /* display above all pages*/
   justify-content: space-between; 
+  z-index: 999;
+  align-items: center;
 }
 
 /* navigation links appear on big screen*/
@@ -37,7 +39,6 @@ font-size: 3rem;
 color: rgb(255, 208, 0);
 font-weight: 900;
 text-decoration: none;
-z-index: 999;
 }
 
 header{
@@ -50,10 +51,16 @@ input[type="checkbox"] {
   opacity: 0;
 }
 h2 {
+  font-size: 35px;
+  font-family: 'Raleway', 'sans-serif';
+  color:#000;
+}
+
+.faq {
   font-size: 30px;
   font-weight: 400;
   font-family: 'Raleway', sans-serif;
-  color:#000;;
+  color:#000;
   margin: 20px 0 0;
 }
 label {
@@ -74,7 +81,7 @@ label::before {
   border-bottom: 8px solid transparent;
   margin-top: -8px;
 }
-input[type="checkbox"]:checked ~ h2 label::before {
+input[type="checkbox"]:checked ~ h3 label::before {
   border-left: 8px solid transparent;
   border-top: 8px solid black;
   border-right: 8px solid transparent;
@@ -91,7 +98,7 @@ input[type="checkbox"]:checked ~ h2 label::before {
   font-weight: normal;
 }
 
-input[type="checkbox"]:checked ~ h2 ~ p {
+input[type="checkbox"]:checked ~ h3 ~ p {
   max-height: 80px;
 }
 
@@ -109,7 +116,7 @@ input[type=text], select, textarea {
 
 
 input[type=submit] {
-  background-color:black;
+  background-color: black;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -131,6 +138,7 @@ input[type=submit]:hover {
     flex-direction: column;
     flex-basis: 60%;
     margin-top: 100px;
+    margin-left: 10px;
 }
 
 .form {
